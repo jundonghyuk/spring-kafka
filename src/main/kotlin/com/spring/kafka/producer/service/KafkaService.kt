@@ -1,4 +1,4 @@
-package com.spring.kafka.producer
+package com.spring.kafka.producer.service
 
 import jakarta.annotation.PostConstruct
 import org.springframework.kafka.core.KafkaTemplate
