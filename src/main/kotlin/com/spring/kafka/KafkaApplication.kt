@@ -1,4 +1,4 @@
-package com.spring.kafka.producer
+package com.spring.kafka
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
