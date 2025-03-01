@@ -1,4 +1,4 @@
-package com.spring.kafka.producer.fireforgot
+package com.spring.kafka.producer
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

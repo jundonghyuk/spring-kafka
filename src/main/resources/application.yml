@@ -10,4 +10,9 @@ kafka:
   example:
     topic: sample_example
 
+logging:
+  level:
+    org.apache.kafka.clients.producer.KafkaProducer: DEBUG
+    org.springframework.kafka.core.KafkaTemplate: DEBUG
+
 

@@ -1,4 +1,4 @@
-package com.spring.kafka.producer.fireforgot.config
+package com.spring.kafka.producer.config
 
 import org.apache.kafka.clients.producer.ProducerConfig
 import org.springframework.boot.context.properties.EnableConfigurationProperties
