@@ -7,12 +7,19 @@ kafka:
     - localhost:29091
     - localhost:29092
     - localhost:29093
-  example:
+  example-producer:
+    topic: sample_example
+  example-consumer:
+    group-id: example_consumer_group
+    enable-auto-commit: true
+    auto-offset-reset: latest
     topic: sample_example
 
 logging:
   level:
     org.apache.kafka.clients.producer.KafkaProducer: DEBUG
     org.springframework.kafka.core.KafkaTemplate: DEBUG
+    org.apache.kafka.clients.consumer: DEBUG
+    org.springframework.kafka: DEBUG
 
 
