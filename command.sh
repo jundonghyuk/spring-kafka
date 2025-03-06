@@ -1,13 +1,17 @@
 # 토픽 생성
+# https://kafka.apache.org/25/documentation.html#min.insync.replicas
 ./kafka-topics --bootstrap-server kafka1:9091 --create --replication-factor 3 --topic test --partitions 1
 
 # 토픽 정보 확인
 ./kafka-topics --bootstrap-server kafka1:9091 --topic test --describe
 
 # 프로듀서 클라이언트 실행
+# acks to "all" (or "-1")
 ./kafka-console-producer --bootstrap-server kafka2:9092 --topic test2
 
 # 컨슈머 클라이언트 실행 (컨슈머 그룹 이름, 오프셋 리셋 옵션)
+# 오프셋 리셋 옵션: earliest, latest, none
+# reset-offsets -to offset 3 --execute: 특정 오프셋으로 리셋
 ./kafka-console-consumer --bootstrap-server kafka2:9092 --topic test4 --group consumer-group-1 --consumer-property auto.offset.reset=latest
 
 # 세그먼트 파일 확인
